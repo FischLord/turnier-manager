@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h1 class="text-2xl font-bold">Login</h1>
+<form method="POST" action="/login" class="bg-formbg p-6 rounded-lg shadow-md">
+    <div class="mt-4">
+        <label for="username" class="block text-text">Benutzername</label>
+        <input type="text" name="username" id="username" class="mt-1 block w-full bg-primary border border-formborder rounded-lg py-2 px-3 text-text">
+    </div>
+    <div class="mt-4">
+        <label for="password" class="block text-text">Passwort</label>
+        <input type="password" name="password" id="password" class="mt-1 block w-full bg-primary border border-formborder rounded-lg py-2 px-3 text-text">
+    </div>
+    <div class="mt-4">
+        <button type="submit" class="bg-accent text-white px-4 py-2 rounded-lg transition duration-300">Login</button>
+    </div>
+</form>
+{% endblock %}

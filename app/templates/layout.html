@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Turnier-Manager{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+</head>
+<body class="bg-primary text-text">
+    <nav class="bg-secondary shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex space-x-4">
+                    <a href="/" class="text-text text-lg font-bold">Turnier-Manager</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="/" class="py-2 px-3 text-text hover:bg-hover rounded-lg transition duration-300">Startseite</a>
+                        <a href="/events" class="py-2 px-3 text-text hover:bg-hover rounded-lg transition duration-300">Veranstaltungen</a>
+                        <a href="/participants" class="py-2 px-3 text-text hover:bg-hover rounded-lg transition duration-300">Teilnehmer</a>
+                        <a href="/results" class="py-2 px-3 text-text hover:bg-hover rounded-lg transition duration-300">Ergebnisse</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="/login" class="py-2 px-3 text-text hover:bg-hover rounded-lg transition duration-300">Login</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu hidden md:hidden bg-secondary">
+            <a href="/" class="block py-2 px-4 text-sm text-text hover:bg-hover rounded-lg transition duration-300">Startseite</a>
+            <a href="/events" class="block py-2 px-4 text-sm text-text hover:bg-hover rounded-lg transition duration-300">Veranstaltungen</a>
+            <a href="/participants" class="block py-2 px-4 text-sm text-text hover:bg-hover rounded-lg transition duration-300">Teilnehmer</a>
+            <a href="/results" class="block py-2 px-4 text-sm text-text hover:bg-hover rounded-lg transition duration-300">Ergebnisse</a>
+            <a href="/login" class="block py-2 px-4 text-sm text-text hover:bg-hover rounded-lg transition duration-300">Login</a>
+        </div>
+    </nav>
+
+    <main class="my-8">
+        <div class="container mx-auto px-6">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer class="bg-secondary shadow mt-8 py-4">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    &copy; 2024 Turnier-Manager
+                </div>
+                <div>
+                    <a href="/login" class="text-text hover:bg-hover rounded-lg transition duration-300">Veranstalter-Login</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/flowbite.js') }}"></script>
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

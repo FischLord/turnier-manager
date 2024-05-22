@@ -98,3 +98,13 @@ Turnier-Manager ist eine umfassende Webanwendung zur effizienten Verwaltung von 
 ## Beitrag
 
 Beiträge sind willkommen! Bitte forken Sie das Repository und senden Sie Pull Requests für Verbesserungen oder Fehlerbehebungen.
+
+## Farbpalette für Turnier-Manager
+
+- **Primärfarbe (Hintergrund)**: #1E1E2E
+- **Sekundärfarbe (NavBar und Footer)**: #252537
+- **Akzentfarbe (Buttons, Links)**: #3B82F6
+- **Textfarbe**: #E5E5E5
+- **Formhintergrund**: #2A2A3C
+- **Formrahmen**: #3B3B51
+- **Hover-Farbe**: #4B4B6B

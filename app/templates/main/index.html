@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Turnier-Manager</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
-</head>
-<body>
-    <h1>Willkommen zum Turnier-Manager</h1>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %}Startseite{% endblock %}
+
+{% block content %}
+<h1 class="text-2xl font-bold">Willkommen zum Turnier-Manager</h1>
+<p class="mt-4">Verwalten Sie Ihre Reitturniere effizient und einfach.</p>
+{% endblock %}
